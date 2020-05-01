@@ -44,6 +44,7 @@ class Tree{
 	Scanner sc=new Scanner(System.in);
 	Node root;
 	Node p;
+	//For creating the Node in tree
 	public void create(){
 		System.out.println("Enter the Root data");
 		root=new Node(sc.nextInt());
@@ -68,9 +69,11 @@ class Tree{
 			}
 		}
 	}
+	//return the address of root node
 	public Node root(){
 		return root;
 	}
+	//Pre Order Display
 	public void preOrderDisplay(Node n){
 		Stack s=new Stack();
 		while((n!=null)||!s.isEmpty()){
@@ -84,6 +87,7 @@ class Tree{
 			}
 		}
 	}
+	//Inorder Display
 	public void inOrderDisplay(Node n){
 		Stack s=new Stack();
 		while((n!=null)||(!s.isEmpty())){
@@ -97,6 +101,7 @@ class Tree{
 			}
 		}
 	}
+	//Level Order Display
 	public void levelOrderTraversal(Node n){
 		Queue q=new Queue();
 		System.out.println(n.data);
@@ -158,6 +163,7 @@ class Tree{
 			return x+y+n.data;
 		}return 0;
 	}
+	//
 	public int leafNode(Node n){
 		int x;
 		int y;
@@ -170,6 +176,7 @@ class Tree{
 				return x+y;
 		}return 0;
 	}
+	//Height of tree
 	public int fun(Node n){
 		int x;
 		int y;
